@@ -1,0 +1,1150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CET138 Mastery Portfolio | Full Stack Development</title>
+  
+  <!-- Bootstrap 5 CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Open+Sans:wght@400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+  <!-- AOS Animation Library -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- ========== NAVBAR ========== -->
+  <nav class="navbar navbar-expand-lg sticky-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="#home">
+        <div class="brand-icon">
+          <i class="fas fa-code"></i>
+        </div>
+        <span class="fw-bold">CET138 <span class="text-gradient">Mastery</span></span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#fullstack"><i class="fas fa-layer-group me-1"></i> Full Stack</a></li>
+          <li class="nav-item"><a class="nav-link" href="#html"><i class="fab fa-html5 me-1"></i> HTML</a></li>
+          <li class="nav-item"><a class="nav-link" href="#css"><i class="fab fa-css3-alt me-1"></i> CSS</a></li>
+          <li class="nav-item"><a class="nav-link" href="#bootstrap"><i class="fab fa-bootstrap me-1"></i> Bootstrap</a></li>
+          <li class="nav-item"><a class="nav-link" href="#javascript"><i class="fab fa-js me-1"></i> JavaScript</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ========== HERO SECTION ========== -->
+  <section id="home" class="hero-section">
+    <div class="container">
+      <div class="row min-vh-100 align-items-center">
+        <div class="col-lg-7" data-aos="fade-right" data-aos-duration="1000">
+          <div class="hero-badge">
+            <span class="badge-glow"><i class="fas fa-star me-2"></i>Master's Level Portfolio</span>
+          </div>
+          <h1 class="hero-title">
+            Full Stack <br>
+            <span class="text-gradient">Development</span>
+          </h1>
+          <p class="hero-description">
+            A comprehensive showcase demonstrating mastery of HTML5, CSS3, Bootstrap 5, and JavaScript 
+            with real-world implementations, API integrations, and advanced interactive features.
+          </p>
+          <div class="tech-stack">
+            <span class="tech-item html"><i class="fab fa-html5"></i> HTML5</span>
+            <span class="tech-item css"><i class="fab fa-css3-alt"></i> CSS3</span>
+            <span class="tech-item js"><i class="fab fa-js"></i> JavaScript</span>
+            <span class="tech-item bootstrap"><i class="fab fa-bootstrap"></i> Bootstrap</span>
+          </div>
+          <div class="hero-cta mt-4">
+            <a href="#fullstack" class="btn btn-primary-glow me-3">Explore Portfolio <i class="fas fa-arrow-right ms-2"></i></a>
+            <button class="btn btn-outline-glow" data-bs-toggle="modal" data-bs-target="#studentInfoModal">
+              <i class="fas fa-user-graduate me-2"></i>Student Info
+            </button>
+          </div>
+        </div>
+        <div class="col-lg-5" data-aos="fade-left" data-aos-duration="1000">
+          <div class="hero-diagram">
+            <div class="diagram-container">
+              <!-- Frontend Node -->
+              <div class="diagram-node frontend" data-bs-toggle="tooltip" title="HTML, CSS, JavaScript - What users see and interact with">
+                <i class="fas fa-desktop"></i>
+                <span>Frontend</span>
+                <div class="node-pulse"></div>
+              </div>
+              
+              <!-- Backend Node -->
+              <div class="diagram-node backend" data-bs-toggle="tooltip" title="Server-side logic, APIs, Authentication">
+                <i class="fas fa-server"></i>
+                <span>Backend</span>
+                <div class="node-pulse"></div>
+              </div>
+              
+              <!-- Database Node -->
+              <div class="diagram-node database" data-bs-toggle="tooltip" title="Data persistence, SQL, NoSQL">
+                <i class="fas fa-database"></i>
+                <span>Database</span>
+                <div class="node-pulse"></div>
+              </div>
+              
+              <!-- Connection Lines -->
+              <svg class="connection-lines" viewBox="0 0 400 200">
+                <path class="line frontend-backend" d="M80 100 L200 100" />
+                <path class="line backend-database" d="M200 100 L320 100" />
+                <path class="line backend-frontend" d="M200 120 L80 120" />
+                <circle class="data-flow" r="4" fill="#6C63FF">
+                  <animateMotion dur="3s" repeatCount="indefinite" path="M80 100 L200 100" />
+                </circle>
+                <circle class="data-flow" r="4" fill="#36D1DC">
+                  <animateMotion dur="3.5s" repeatCount="indefinite" path="M200 100 L320 100" />
+                </circle>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-shape">
+      <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ========== FULL STACK DEVELOPMENT SECTION ========== -->
+  <section id="fullstack" class="section">
+    <div class="container">
+      <div class="section-header text-center" data-aos="fade-up">
+        <span class="section-subtitle">Foundation</span>
+        <h2 class="section-title">What is <span class="text-gradient">Full Stack Development?</span></h2>
+        <div class="title-underline"></div>
+      </div>
+      
+      <div class="row g-4 mt-4">
+        <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front frontend-gradient">
+                <i class="fas fa-laptop-code fa-4x mb-3"></i>
+                <h3>Frontend</h3>
+                <p class="mb-0">The Presentation Layer</p>
+              </div>
+              <div class="flip-card-back">
+                <h4>Technologies</h4>
+                <ul class="list-unstyled">
+                  <li><i class="fab fa-html5 text-danger me-2"></i> HTML5 - Structure</li>
+                  <li><i class="fab fa-css3-alt text-info me-2"></i> CSS3 - Styling</li>
+                  <li><i class="fab fa-js text-warning me-2"></i> JavaScript - Logic</li>
+                  <li><i class="fab fa-react text-info me-2"></i> React/Vue/Angular</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front backend-gradient">
+                <i class="fas fa-server fa-4x mb-3"></i>
+                <h3>Backend</h3>
+                <p class="mb-0">The Logic Layer</p>
+              </div>
+              <div class="flip-card-back">
+                <h4>Technologies</h4>
+                <ul class="list-unstyled">
+                  <li><i class="fab fa-node text-success me-2"></i> Node.js</li>
+                  <li><i class="fab fa-python text-primary me-2"></i> Python/Django</li>
+                  <li><i class="fas fa-code text-warning me-2"></i> PHP/Laravel</li>
+                  <li><i class="fas fa-shield-alt text-info me-2"></i> Authentication</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front database-gradient">
+                <i class="fas fa-database fa-4x mb-3"></i>
+                <h3>Database</h3>
+                <p class="mb-0">The Data Layer</p>
+              </div>
+              <div class="flip-card-back">
+                <h4>Technologies</h4>
+                <ul class="list-unstyled">
+                  <li><i class="fas fa-database text-success me-2"></i> MySQL/PostgreSQL</li>
+                  <li><i class="fas fa-leaf text-success me-2"></i> MongoDB (NoSQL)</li>
+                  <li><i class="fas fa-cloud text-primary me-2"></i> Firebase</li>
+                  <li><i class="fas fa-chart-line text-info me-2"></i> Redis/Caching</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="row mt-5" data-aos="fade-up">
+        <div class="col-12">
+          <div class="code-card">
+            <div class="code-header">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+              <span class="filename">fullstack-explanation.js</span>
+            </div>
+            <div class="code-body">
+              <pre><code><span class="comment">// A Full Stack Developer understands the entire web development process</span>
+<span class="keyword">const</span> <span class="variable">fullStackDeveloper</span> = {
+  <span class="property">frontend</span>: [<span class="string">'HTML'</span>, <span class="string">'CSS'</span>, <span class="string">'JavaScript'</span>, <span class="string">'React'</span>],
+  <span class="property">backend</span>: [<span class="string">'Node.js'</span>, <span class="string">'Python'</span>, <span class="string">'APIs'</span>],
+  <span class="property">database</span>: [<span class="string">'SQL'</span>, <span class="string">'MongoDB'</span>, <span class="string">'Data Modeling'</span>],
+  <span class="property">devOps</span>: [<span class="string">'Git'</span>, <span class="string">'Deployment'</span>, <span class="string">'Cloud Services'</span>],
+  
+  <span class="function">explainConcept</span>() {
+    <span class="keyword">return</span> <span class="string">`Full Stack Development means working across the entire stack:
+    - 🎨 Frontend: What users see and interact with
+    - ⚙️ Backend: Server-side logic and APIs
+    - 💾 Database: Data storage and retrieval
+    - 🚀 DevOps: Deployment and maintenance`</span>;
+  }
+};
+
+<span class="builtin">console</span>.<span class="function">log</span>(<span class="variable">fullStackDeveloper</span>.<span class="function">explainConcept</span>());</code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== HTML SECTION ========== -->
+  <section id="html" class="section bg-light-custom">
+    <div class="container">
+      <div class="section-header text-center" data-aos="fade-up">
+        <span class="section-subtitle">Structure & Semantics</span>
+        <h2 class="section-title"><i class="fab fa-html5 text-danger me-2"></i> HTML5 <span class="text-gradient">Mastery</span></h2>
+        <div class="title-underline"></div>
+      </div>
+      
+      <div class="row g-4 mt-4">
+        <div class="col-lg-6" data-aos="fade-right">
+          <div class="feature-card">
+            <div class="card-header-html">
+              <h3><i class="fas fa-pen-fancy me-2"></i> AJAX Contact Form</h3>
+            </div>
+            <div class="card-body">
+              <form id="ajaxContactForm" class="needs-validation" novalidate>
+                <fieldset>
+                  <legend class="visually-hidden">Contact Form</legend>
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <label for="firstName" class="form-label">First Name <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control form-control-lg" id="firstName" required minlength="2" maxlength="30" pattern="[A-Za-z ]+">
+                    <div class="invalid-feedback">Please enter a valid first name (2-30 letters only).</div>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="lastName" class="form-label">Last Name</label>
+                    <input type="text" class="form-control form-control-lg" id="lastName">
+                  </div>
+                  <div class="col-md-12">
+                    <label for="emailAddress" class="form-label">Email Address <span class="text-danger">*</span></label>
+                    <input type="email" class="form-control form-control-lg" id="emailAddress" required>
+                    <div class="invalid-feedback">Please enter a valid email address.</div>
+                  </div>
+                  <div class="col-md-12">
+                    <label for="phoneNumber" class="form-label">Phone Number</label>
+                    <input type="tel" class="form-control form-control-lg" id="phoneNumber" pattern="[0-9]{10,15}" placeholder="e.g., 1234567890">
+                    <div class="form-text">10-15 digits only</div>
+                  </div>
+                  <div class="col-md-12">
+                    <label for="messageSubject" class="form-label">Subject</label>
+                    <div class="custom-select-wrap">
+                      <select class="form-select form-select-lg" id="messageSubject">
+                        <option value="general">General Inquiry</option>
+                        <option value="project">Project Discussion</option>
+                        <option value="job">Job Opportunity</option>
+                        <option value="feedback">Feedback</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-md-12">
+                    <label for="messageContent" class="form-label">Message <span class="text-danger">*</span></label>
+                    <textarea class="form-control" id="messageContent" rows="4" required minlength="10"></textarea>
+                    <div class="invalid-feedback">Message must be at least 10 characters.</div>
+                  </div>
+                  <div class="col-12">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="termsCheck" required>
+                      <label class="form-check-label" for="termsCheck">
+                        I agree to the <a href="#" data-bs-toggle="modal" data-bs-target="#termsModal">terms and conditions</a> <span class="text-danger">*</span>
+                      </label>
+                      <div class="invalid-feedback">You must agree before submitting.</div>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <button type="submit" class="btn btn-html w-100 btn-lg" id="submitFormBtn">
+                      <span class="btn-text">Send Message <i class="fas fa-paper-plane ms-2"></i></span>
+                      <span class="btn-loading d-none">
+                        <span class="spinner-border spinner-border-sm me-2"></span>Sending...
+                      </span>
+                    </button>
+                  </div>
+                </div>
+                </fieldset>
+              </form>
+              <div id="formResponse" class="alert mt-3 d-none"></div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-6" data-aos="fade-left">
+          <div class="feature-card h-100">
+            <div class="card-header-html">
+              <h3><i class="fas fa-code me-2"></i> HTML5 Features Demonstrated</h3>
+            </div>
+            <div class="card-body">
+              <div class="feature-showcase">
+                <div class="feature-item">
+                  <div class="feature-icon bg-danger text-white">
+                    <i class="fas fa-check"></i>
+                  </div>
+                  <div class="feature-content">
+                    <h4>Semantic HTML5</h4>
+                    <p>Using proper form structure with fieldset, legend, and semantic input types</p>
+                  </div>
+                </div>
+                
+                <div class="feature-item">
+                  <div class="feature-icon bg-warning text-white">
+                    <i class="fas fa-check"></i>
+                  </div>
+                  <div class="feature-content">
+                    <h4>Built-in Validation</h4>
+                    <p>HTML5 validation attributes: required, minlength, pattern, type="email"</p>
+                  </div>
+                </div>
+                
+                <div class="feature-item">
+                  <div class="feature-icon bg-success text-white">
+                    <i class="fas fa-check"></i>
+                  </div>
+                  <div class="feature-content">
+                    <h4>Accessibility (ARIA)</h4>
+                    <p>Proper labels, aria attributes, and semantic structure for screen readers</p>
+                  </div>
+                </div>
+                
+                <div class="feature-item">
+                  <div class="feature-icon bg-info text-white">
+                    <i class="fas fa-check"></i>
+                  </div>
+                  <div class="feature-content">
+                    <h4>AJAX Form Submission</h4>
+                    <p>Modern Fetch API with async/await, FormData handling, and user feedback</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="code-snippet mt-4">
+                <div class="code-header">
+                  <span class="filename">HTML5 Code Sample</span>
+                  <button class="btn btn-sm btn-outline-danger copy-code" data-code="html-sample">
+                    <i class="far fa-copy"></i> Copy
+                  </button>
+                </div>
+                <pre><code id="html-sample">&lt;!-- Semantic HTML5 Form Structure --&gt;
+&lt;form id="contactForm" novalidate&gt;
+  &lt;div class="form-group"&gt;
+    &lt;label for="email"&gt;Email:&lt;/label&gt;
+    &lt;input type="email" 
+           id="email" 
+           required 
+           pattern="[^@\s]+@[^@\s]+\.[^@\s]+"&gt;
+    &lt;div class="error-message"&gt;
+      Please enter a valid email
+    &lt;/div&gt;
+  &lt;/div&gt;
+  
+  &lt;!-- Custom datalist for suggestions --&gt;
+  &lt;label for="browser"&gt;Choose browser:&lt;/label&gt;
+  &lt;input list="browsers" id="browser"&gt;
+  &lt;datalist id="browsers"&gt;
+    &lt;option value="Chrome"&gt;
+    &lt;option value="Firefox"&gt;
+    &lt;option value="Safari"&gt;
+  &lt;/datalist&gt;
+&lt;/form&gt;</code></pre>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CSS SECTION ========== -->
+  <section id="css" class="section">
+    <div class="container">
+      <div class="section-header text-center" data-aos="fade-up">
+        <span class="section-subtitle">Styling & Layout</span>
+        <h2 class="section-title"><i class="fab fa-css3-alt text-info me-2"></i> CSS3 <span class="text-gradient">Mastery</span></h2>
+        <div class="title-underline"></div>
+      </div>
+      
+      <!-- Profile Card — placed first in CSS section to showcase CSS techniques -->
+      <div class="row justify-content-center mb-5" data-aos="fade-up">
+        <div class="col-lg-4 col-md-7 col-sm-9">
+          <div class="profile-card">
+            <div class="profile-card-header">
+              <div class="profile-card-cover"></div>
+              <div class="profile-card-social">
+                <a href="#" class="social-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+              </div>
+              <div class="profile-avatar-wrap">
+                <div class="profile-avatar"><i class="fas fa-user-graduate"></i></div>
+                <div class="profile-status-dot"></div>
+              </div>
+            </div>
+            <div class="profile-card-body">
+              <h3 class="profile-name">Yash Raj Sharma</h3>
+              <p class="profile-role">Full Stack Developer</p>
+              <p class="profile-bio">Passionate about building scalable web applications and creating beautiful user experiences with modern technologies.</p>
+              <div class="profile-skills">
+                <span class="skill-tag html5">HTML5</span>
+                <span class="skill-tag css3">CSS3</span>
+                <span class="skill-tag js">JavaScript</span>
+                <span class="skill-tag bs">Bootstrap</span>
+              </div>
+              <div class="profile-stats">
+                <div class="stat-item"><span class="stat-num">12</span><span class="stat-label">Projects</span></div>
+                <div class="stat-divider"></div>
+                <div class="stat-item"><span class="stat-num">3</span><span class="stat-label">Years Exp.</span></div>
+                <div class="stat-divider"></div>
+                <div class="stat-item"><span class="stat-num">98%</span><span class="stat-label">Satisfaction</span></div>
+              </div>
+              <div class="profile-actions">
+                <a href="/cdn-cgi/l/email-protection#c3a1a9f3f1baaf83b0b7b6a7a6adb7edb0b6ada7a6b1afa2ada7eda2a0edb6a8" class="btn-profile-primary" style="text-decoration:none;display:inline-flex;align-items:center;justify-content:center;"><i class="fas fa-envelope me-2"></i>Contact Me</a>
+                <button class="btn-profile-ghost"><i class="fas fa-download me-2"></i>Resume</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-8 col-md-12 d-flex align-items-center" data-aos="fade-left">
+          <div class="feature-card w-100">
+            <div class="card-header-css">
+              <h3><i class="fas fa-magic me-2"></i> CSS Techniques Demonstrated in This Card</h3>
+            </div>
+            <div class="card-body">
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <div class="feature-item mb-0">
+                    <div class="feature-icon bg-primary text-white"><i class="fas fa-fill-drip"></i></div>
+                    <div class="feature-content"><h4>Animated Gradient Cover</h4><p>Multi-stop <code>linear-gradient</code> shifts position via <code>@keyframes background-position</code> — no JS needed.</p></div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="feature-item mb-0">
+                    <div class="feature-icon bg-info text-white"><i class="fas fa-mouse-pointer"></i></div>
+                    <div class="feature-content"><h4>Hover Lift &amp; Glow</h4><p><code>transform: translateY()</code> + <code>box-shadow</code> transition creates a 3D lift effect on card hover.</p></div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="feature-item mb-0">
+                    <div class="feature-icon bg-success text-white"><i class="fas fa-dot-circle"></i></div>
+                    <div class="feature-content"><h4>Pulsing Status Dot</h4><p>Pure CSS <code>@keyframes</code> animates <code>box-shadow</code> to create a live online pulse — zero JavaScript.</p></div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="feature-item mb-0">
+                    <div class="feature-icon bg-warning text-white"><i class="fas fa-sign-in-alt"></i></div>
+                    <div class="feature-content"><h4>Slide-in Social Icons</h4><p>Icons start <code>translateX(60px)</code> and are invisible. Card <code>:hover</code> transitions them in with staggered <code>transition-delay</code>.</p></div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="feature-item mb-0">
+                    <div class="feature-icon bg-danger text-white"><i class="fas fa-sliders-h"></i></div>
+                    <div class="feature-content"><h4>CSS Custom Properties</h4><p>All colours reference <code>:root</code> variables — the card automatically adapts to dark &amp; purple themes.</p></div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="feature-item mb-0">
+                    <div class="feature-icon bg-secondary text-white"><i class="fas fa-mobile-alt"></i></div>
+                    <div class="feature-content"><h4>Fully Responsive</h4><p>Bootstrap <code>col-lg-4 col-md-7</code> grid collapses gracefully. Internal layout uses <code>flexbox</code> at every breakpoint.</p></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row g-4 mt-2">
+        <div class="col-lg-6" data-aos="fade-right">
+          <div class="css-showcase">
+            <div class="showcase-tabs">
+              <button class="tab-btn active" data-tab="grid">CSS Grid</button>
+              <button class="tab-btn" data-tab="flex">Flexbox</button>
+              <button class="tab-btn" data-tab="animations">Animations</button>
+              <button class="tab-btn" data-tab="variables">Variables</button>
+            </div>
+            
+            <div class="tab-content active" id="grid-tab">
+              <h4 class="mb-3">CSS Grid Photo Gallery</h4>
+              <div class="grid-gallery">
+                <div class="gallery-item wide">
+                  <img src="https://picsum.photos/600/400?random=1" alt="Random 1">
+                  <div class="gallery-overlay">
+                    <span>Grid Template Areas</span>
+                  </div>
+                </div>
+                <div class="gallery-item tall">
+                  <img src="https://picsum.photos/400/600?random=2" alt="Random 2">
+                  <div class="gallery-overlay">
+                    <span>Responsive Columns</span>
+                  </div>
+                </div>
+                <div class="gallery-item">
+                  <img src="https://picsum.photos/400/400?random=3" alt="Random 3">
+                  <div class="gallery-overlay">
+                    <span>Auto-fit</span>
+                  </div>
+                </div>
+                <div class="gallery-item">
+                  <img src="https://picsum.photos/400/400?random=4" alt="Random 4">
+                  <div class="gallery-overlay">
+                    <span>Minmax()</span>
+                  </div>
+                </div>
+                <div class="gallery-item">
+                  <img src="https://picsum.photos/400/400?random=5" alt="Random 5">
+                  <div class="gallery-overlay">
+                    <span>Gap Property</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="tab-content" id="flex-tab">
+              <h4 class="mb-3">Flexbox Navigation Bar</h4>
+              <div class="flex-demo">
+                <div class="flex-container">
+                  <div class="flex-logo">Logo</div>
+                  <div class="flex-nav">
+                    <a href="#">Home</a>
+                    <a href="#">About</a>
+                    <a href="#">Services</a>
+                    <a href="#">Contact</a>
+                  </div>
+                  <div class="flex-actions">
+                    <button>Login</button>
+                    <button class="primary">Sign Up</button>
+                  </div>
+                </div>
+                <div class="flex-explanation mt-4">
+                  <p><strong>Flexbox properties used:</strong> display: flex, justify-content: space-between, align-items: center, gap, flex-grow</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="tab-content" id="animations-tab">
+              <h4 class="mb-3">CSS Animations & Transitions</h4>
+              <div class="animations-demo">
+                <div class="animation-box">
+                  <div class="box pulse">Pulse</div>
+                  <div class="box bounce">Bounce</div>
+                  <div class="box rotate">Rotate</div>
+                  <div class="box slide">Slide</div>
+                </div>
+                <div class="animation-progress">
+                  <div class="progress-bar-css"></div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="tab-content" id="variables-tab">
+              <h4 class="mb-3">CSS Custom Properties (Variables)</h4>
+              <div class="variables-demo">
+                <div class="theme-switcher">
+                  <button class="theme-btn" data-theme="light">Light</button>
+                  <button class="theme-btn" data-theme="dark">Dark</button>
+                  <button class="theme-btn" data-theme="purple">Purple</button>
+                </div>
+                <div class="variable-card" id="theme-card">
+                  <h5>Themed Card</h5>
+                  <p>This card's colors change using CSS variables</p>
+                  <div class="variable-demo-box"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-6" data-aos="fade-left">
+          <div class="feature-card">
+            <div class="card-header-css">
+              <h3><i class="fas fa-code me-2"></i> Advanced CSS Techniques</h3>
+            </div>
+            <div class="card-body">
+              <div class="css-features">
+                <div class="feature-badge">
+                  <span class="badge-css">CSS Grid</span>
+                  <span class="badge-css">Flexbox</span>
+                  <span class="badge-css">Keyframes</span>
+                  <span class="badge-css">Variables</span>
+                  <span class="badge-css">Media Queries</span>
+                  <span class="badge-css">Transform</span>
+                  <span class="badge-css">Transition</span>
+                  <span class="badge-css">Pseudo-elements</span>
+                  <span class="badge-css">Clipping</span>
+                  <span class="badge-css">Filters</span>
+                </div>
+                
+                <div class="code-snippet mt-4">
+                  <div class="code-header">
+                    <span class="filename">style.css - Grid Gallery</span>
+                    <button class="btn btn-sm btn-outline-info copy-code" data-code="css-sample">
+                      <i class="far fa-copy"></i> Copy
+                    </button>
+                  </div>
+                  <pre><code id="css-sample"><span class="css-selector">.grid-gallery</span> {
+  <span class="css-property">display</span>: grid;
+  <span class="css-property">grid-template-columns</span>: <span class="css-value">repeat(auto-fit, minmax(150px, 1fr))</span>;
+  <span class="css-property">grid-auto-rows</span>: <span class="css-value">minmax(150px, auto)</span>;
+  <span class="css-property">gap</span>: <span class="css-value">1rem</span>;
+  <span class="css-property">grid-template-areas</span>: 
+    <span class="css-value">"wide wide tall"</span>
+    <span class="css-value">"wide wide normal"</span>;
+}
+
+<span class="css-selector">.gallery-item</span> {
+  <span class="css-property">position</span>: <span class="css-value">relative</span>;
+  <span class="css-property">overflow</span>: <span class="css-value">hidden</span>;
+  <span class="css-property">border-radius</span>: <span class="css-value">12px</span>;
+  <span class="css-property">transition</span>: <span class="css-value">all 0.3s ease</span>;
+}
+
+<span class="css-selector">.gallery-item:hover</span> {
+  <span class="css-property">transform</span>: <span class="css-value">scale(1.05)</span>;
+  <span class="css-property">box-shadow</span>: <span class="css-value">0 10px 30px rgba(108, 99, 255, 0.3)</span>;
+}
+
+<span class="css-comment">/* CSS Custom Properties */</span>
+<span class="css-selector">:root</span> {
+  <span class="css-property">--primary-color</span>: <span class="css-value">#6C63FF</span>;
+  <span class="css-property">--secondary-color</span>: <span class="css-value">#36D1DC</span>;
+  <span class="css-property">--spacing-unit</span>: <span class="css-value">1rem</span>;
+}</code></pre>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========== BOOTSTRAP SECTION ========== -->
+  <section id="bootstrap" class="section bg-light-custom">
+    <div class="container">
+      <div class="section-header text-center" data-aos="fade-up">
+        <span class="section-subtitle">Responsive Framework</span>
+        <h2 class="section-title"><i class="fab fa-bootstrap text-purple me-2"></i> Bootstrap 5 <span class="text-gradient">Mastery</span></h2>
+        <div class="title-underline"></div>
+      </div>
+      
+      <div class="row g-4 mt-4">
+        <div class="col-lg-7" data-aos="fade-right">
+          <div class="feature-card">
+            <div class="card-header-bootstrap">
+              <h3><i class="fas fa-shopping-cart me-2"></i> Interactive Product Store</h3>
+            </div>
+            <div class="card-body">
+              <div class="row g-3">
+                <div class="col-md-4">
+                  <div class="product-card">
+                    <div class="product-badge">New</div>
+                    <img src="https://picsum.photos/300/300?random=10" class="product-img" alt="Product 1">
+                    <h5>Wireless Headphones</h5>
+                    <p class="product-price">$79.99</p>
+                    <div class="product-rating">
+                      <i class="fas fa-star text-warning"></i>
+                      <i class="fas fa-star text-warning"></i>
+                      <i class="fas fa-star text-warning"></i>
+                      <i class="fas fa-star text-warning"></i>
+                      <i class="fas fa-star-half-alt text-warning"></i>
+                      <span>(4.5)</span>
+                    </div>
+                    <button class="btn btn-bootstrap w-100 add-to-cart" data-product="Headphones" data-price="79.99">
+                      <i class="fas fa-cart-plus me-2"></i>Add to Cart
+                    </button>
+                  </div>
+                </div>
+                
+                <div class="col-md-4">
+                  <div class="product-card">
+                    <img src="https://picsum.photos/300/300?random=11" class="product-img" alt="Product 2">
+                    <h5>Smart Watch</h5>
+                    <p class="product-price">$199.99</p>
+                    <div class="product-rating">
+                      <i class="fas fa-star text-warning"></i>
+                      <i class="fas fa-star text-warning"></i>
+                      <i class="fas fa-star text-warning"></i>
+                      <i class="fas fa-star text-warning"></i>
+                      <i class="fas fa-star text-warning"></i>
+                      <span>(5.0)</span>
+                    </div>
+                    <button class="btn btn-bootstrap w-100 add-to-cart" data-product="Smart Watch" data-price="199.99">
+                      <i class="fas fa-cart-plus me-2"></i>Add to Cart
+                    </button>
+                  </div>
+                </div>
+                
+                <div class="col-md-4">
+                  <div class="product-card">
+                    <div class="product-badge sale">-15%</div>
+                    <img src="https://picsum.photos/300/300?random=12" class="product-img" alt="Product 3">
+                    <h5>Bluetooth Speaker</h5>
+                    <p class="product-price"><del>$89.99</del> $76.49</p>
+                    <div class="product-rating">
+                      <i class="fas fa-star text-warning"></i>
+                      <i class="fas fa-star text-warning"></i>
+                      <i class="fas fa-star text-warning"></i>
+                      <i class="fas fa-star text-warning"></i>
+                      <i class="fas fa-star text-warning"></i>
+                      <span>(5.0)</span>
+                    </div>
+                    <button class="btn btn-bootstrap w-100 add-to-cart" data-product="Speaker" data-price="76.49">
+                      <i class="fas fa-cart-plus me-2"></i>Add to Cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="cart-summary mt-4 p-3 bg-light rounded">
+                <div class="d-flex justify-content-between align-items-center">
+                  <div>
+                    <i class="fas fa-shopping-cart text-purple fs-4 me-2"></i>
+                    <strong>Cart Items:</strong> <span id="cartCount" class="badge bg-purple rounded-pill">0</span>
+                  </div>
+                  <div>
+                    <strong>Total:</strong> $<span id="cartTotal">0.00</span>
+                  </div>
+                  <button class="btn btn-sm btn-outline-purple" id="checkoutBtn">
+                    <i class="fas fa-credit-card me-1"></i>Checkout
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-5" data-aos="fade-left">
+          <div class="feature-card h-100">
+            <div class="card-header-bootstrap">
+              <h3><i class="fas fa-cubes me-2"></i> Bootstrap Components</h3>
+            </div>
+            <div class="card-body">
+              <!-- Toast Container -->
+              <div class="toast-container position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+                <div id="cartToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+                  <div class="toast-header bg-purple text-white">
+                    <i class="fas fa-check-circle me-2"></i>
+                    <strong class="me-auto">Cart Updated</strong>
+                    <small>just now</small>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="toast"></button>
+                  </div>
+                  <div class="toast-body" id="toastMessage">
+                    Item added to cart!
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Accordion -->
+              <div class="accordion mb-4" id="bootstrapAccordion">
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                      <i class="fab fa-bootstrap me-2 text-purple"></i> Bootstrap Features Used
+                    </button>
+                  </h2>
+                  <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#bootstrapAccordion">
+                    <div class="accordion-body">
+                      <ul class="list-unstyled">
+                        <li><i class="fas fa-check-circle text-success me-2"></i> Responsive Grid System</li>
+                        <li><i class="fas fa-check-circle text-success me-2"></i> Cards Component</li>
+                        <li><i class="fas fa-check-circle text-success me-2"></i> Toasts for Notifications</li>
+                        <li><i class="fas fa-check-circle text-success me-2"></i> Accordion</li>
+                        <li><i class="fas fa-check-circle text-success me-2"></i> Badges</li>
+                        <li><i class="fas fa-check-circle text-success me-2"></i> Utility Classes</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Progress -->
+              <h6>Framework Proficiency</h6>
+              <div class="progress mb-3" style="height: 10px;">
+                <div class="progress-bar bg-purple" style="width: 95%">95%</div>
+              </div>
+              
+              <div class="code-snippet mt-4">
+                <div class="code-header">
+                  <span class="filename">Bootstrap Implementation</span>
+                  <button class="btn btn-sm btn-outline-purple copy-code" data-code="bootstrap-sample">
+                    <i class="far fa-copy"></i> Copy
+                  </button>
+                </div>
+                <pre><code id="bootstrap-sample">&lt;!-- Bootstrap Grid Example --&gt;
+&lt;div class="container"&gt;
+  &lt;div class="row g-4"&gt;
+    &lt;!-- Responsive columns --&gt;
+    &lt;div class="col-12 col-md-6 col-lg-4"&gt;
+      &lt;div class="card h-100"&gt;
+        &lt;img src="..." class="card-img-top"&gt;
+        &lt;div class="card-body"&gt;
+          &lt;h5 class="card-title"&gt;Product&lt;/h5&gt;
+          &lt;p class="card-text"&gt;Description&lt;/p&gt;
+          &lt;a href="#" class="btn btn-primary"&gt;Buy Now&lt;/a&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Toast Notification --&gt;
+&lt;div class="toast" role="alert"&gt;
+  &lt;div class="toast-header"&gt;
+    &lt;i class="fas fa-info me-2"&gt;&lt;/i&gt;
+    &lt;strong&gt;Notification&lt;/strong&gt;
+    &lt;button class="btn-close" data-bs-dismiss="toast"&gt;&lt;/button&gt;
+  &lt;/div&gt;
+  &lt;div class="toast-body"&gt;
+    Item added to cart!
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== JAVASCRIPT SECTION ========== -->
+  <section id="javascript" class="section">
+    <div class="container">
+      <div class="section-header text-center" data-aos="fade-up">
+        <span class="section-subtitle">Interactive & Dynamic</span>
+        <h2 class="section-title"><i class="fab fa-js text-warning me-2"></i> JavaScript <span class="text-gradient">Mastery</span></h2>
+        <div class="title-underline"></div>
+      </div>
+      
+      <div class="row g-4 mt-4">
+        <div class="col-lg-6" data-aos="fade-right">
+          <div class="feature-card">
+            <div class="card-header-js">
+              <h3><i class="fas fa-cloud-sun me-2"></i> Weather API Integration</h3>
+            </div>
+            <div class="card-body">
+              <div class="weather-widget">
+                <div class="weather-search mb-4">
+                  <div class="input-group">
+                    <input type="text" class="form-control" id="cityInput" placeholder="Enter city name (e.g., London, New York)">
+                    <button class="btn btn-js" id="getWeatherBtn">
+                      <i class="fas fa-search"></i> Get Weather
+                    </button>
+                  </div>
+                </div>
+                
+                <div id="weatherLoading" class="text-center d-none">
+                  <div class="spinner-border text-warning" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                  </div>
+                  <p class="mt-2">Fetching weather data...</p>
+                </div>
+                
+                <div id="weatherError" class="alert alert-danger d-none"></div>
+                
+                <div id="weatherResult" class="d-none">
+                  <div class="weather-card">
+                    <div class="row">
+                      <div class="col-8">
+                        <h4 id="cityName"></h4>
+                        <div class="weather-temp" id="temperature"></div>
+                        <div class="weather-desc" id="description"></div>
+                        <div class="weather-details mt-3">
+                          <div class="detail-item">
+                            <i class="fas fa-tint"></i>
+                            <span id="humidity"></span>
+                          </div>
+                          <div class="detail-item">
+                            <i class="fas fa-wind"></i>
+                            <span id="windSpeed"></span>
+                          </div>
+                          <div class="detail-item">
+                            <i class="fas fa-compress"></i>
+                            <span id="pressure"></span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-4 text-center">
+                        <img id="weatherIcon" src="" alt="Weather icon" class="weather-icon">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-6" data-aos="fade-left">
+          <div class="feature-card">
+            <div class="card-header-js">
+              <h3><i class="fas fa-tasks me-2"></i> Advanced Todo with LocalStorage</h3>
+            </div>
+            <div class="card-body">
+              <div class="todo-advanced">
+                <div class="todo-input-group mb-3">
+                  <input type="text" class="form-control" id="advancedTodoInput" placeholder="Add a new task...">
+                  <div class="custom-select-wrap">
+                    <select class="form-select" id="todoPriority">
+                      <option value="low">Low Priority</option>
+                      <option value="medium" selected>Medium Priority</option>
+                      <option value="high">High Priority</option>
+                    </select>
+                  </div>
+                  <button class="btn btn-js" id="advancedAddTodo">
+                    <i class="fas fa-plus"></i>
+                  </button>
+                </div>
+                
+                <div class="todo-filters mb-3">
+                  <button class="filter-btn active" data-filter="all">All</button>
+                  <button class="filter-btn" data-filter="active">Active</button>
+                  <button class="filter-btn" data-filter="completed">Completed</button>
+                </div>
+                
+                <ul class="todo-list-advanced" id="advancedTodoList"></ul>
+                
+                <div class="todo-stats mt-3">
+                  <span id="todoCount">0</span> items left
+                  <button class="btn btn-sm btn-outline-danger float-end" id="clearCompletedBtn">
+                    <i class="fas fa-trash me-1"></i> Clear Completed
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-12" data-aos="fade-up">
+          <div class="feature-card">
+            <div class="card-header-js">
+              <h3><i class="fas fa-code me-2"></i> JavaScript Features Demonstrated</h3>
+            </div>
+            <div class="card-body">
+              <div class="row">
+                <div class="col-md-3">
+                  <div class="js-feature">
+                    <i class="fas fa-sync fa-spin text-warning"></i>
+                    <h5>Async/Await</h5>
+                    <p>Modern promise handling with error catching</p>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="js-feature">
+                    <i class="fas fa-database text-success"></i>
+                    <h5>LocalStorage</h5>
+                    <p>Persistent data storage in browser</p>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="js-feature">
+                    <i class="fas fa-cloud text-info"></i>
+                    <h5>Fetch API</h5>
+                    <p>External API integration</p>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="js-feature">
+                    <i class="fas fa-code-branch text-primary"></i>
+                    <h5>ES6+ Features</h5>
+                    <p>Arrow functions, destructuring, spread operator</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="code-snippet mt-4">
+                <div class="code-header">
+                  <span class="filename">script.js - Async API Call</span>
+                  <button class="btn btn-sm btn-outline-warning copy-code" data-code="js-sample">
+                    <i class="far fa-copy"></i> Copy
+                  </button>
+                </div>
+                <pre><code id="js-sample"><span class="js-comment">// Async/Await with Fetch API</span>
+<span class="js-keyword">async</span> <span class="js-function">function</span> <span class="js-function-name">getWeather</span>(<span class="js-param">city</span>) {
+  <span class="js-keyword">try</span> {
+    <span class="js-comment">// Show loading state</span>
+    showLoading();
+    
+    <span class="js-comment">// API call with fetch</span>
+    <span class="js-keyword">const</span> response = <span class="js-keyword">await</span> <span class="js-builtin">fetch</span>(
+      <span class="js-string">`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=YOUR_API_KEY&units=metric`</span>
+    );
+    
+    <span class="js-comment">// Check if response is ok</span>
+    <span class="js-keyword">if</span> (!response.ok) {
+      <span class="js-keyword">throw new</span> <span class="js-builtin">Error</span>(<span class="js-string">'City not found'</span>);
+    }
+    
+    <span class="js-comment">// Parse JSON response</span>
+    <span class="js-keyword">const</span> data = <span class="js-keyword">await</span> response.json();
+    
+    <span class="js-comment">// Destructure data</span>
+    <span class="js-keyword">const</span> { name, main: { temp, humidity }, weather } = data;
+    
+    <span class="js-comment">// Display results</span>
+    displayWeather({ name, temp, humidity, description: weather[0].description });
+    
+  } <span class="js-keyword">catch</span> (error) {
+    <span class="js-comment">// Error handling</span>
+    showError(error.message);
+  } <span class="js-keyword">finally</span> {
+    <span class="js-comment">// Hide loading state</span>
+    hideLoading();
+  }
+}</code></pre>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8">
+          <h4><i class="fas fa-user-graduate me-2"></i> Student Information</h4>
+          <p><strong>Name:</strong> Yash Raj Sharma</p>
+          <p><strong>Student ID:</strong> bj02yl</p>
+          <p><strong>Module:</strong> CET138 Full Stack Development</p>
+          <p><strong>Assignment:</strong> ePortfolio </p>
+        </div>
+        <div class="col-md-4 text-md-end">
+          <button class="btn btn-outline-light mb-3" data-bs-toggle="modal" data-bs-target="#studentInfoModal">
+            <i class="fas fa-id-card me-2"></i> View Credentials
+          </button>
+          <br>
+          <a href="#home" class="btn btn-primary-glow">
+            <i class="fas fa-arrow-up me-2"></i> Back to Top
+          </a>
+        </div>
+      </div>
+      <hr class="mt-4 bg-light">
+      <p class="text-center mb-0 mt-3 text-white-50">
+        © 2026 CET138 Mastery Portfolio | All examples are fully functional | Last Updated: March 2026
+      </p>
+    </div>
+  </footer>
+
+  <!-- ========== MODALS ========== -->
+  <!-- Student Info Modal -->
+  <div class="modal fade" id="studentInfoModal" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header bg-primary text-white">
+          <h5 class="modal-title"><i class="fas fa-user-graduate me-2"></i> Student Credentials</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <div class="text-center mb-4">
+            <div class="student-avatar">
+              <i class="fas fa-user-circle fa-5x text-primary"></i>
+            </div>
+          </div>
+          <table class="table table-borderless">
+            <tr>
+              <th>Full Name:</th>
+              <td>Yash Raj Sharma</td>
+            </tr>
+            <tr>
+              <th>Student ID:</th>
+              <td>bj02yl</td>
+            </tr>
+            <tr>
+              <th>Course:</th>
+              <td>BSc Computer System Engineering</td>
+            </tr>
+            <tr>
+              <th>University:</th>
+              <td>University of Sunderland</td>
+            </tr>
+            <tr>
+              <th>Module:</th>
+              <td>CET138 Full Stack Development</td>
+            </tr>
+            <tr>
+              <th>Submission Date:</th>
+              <td>March 2026</td>
+            </tr>
+          </table>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Terms Modal -->
+  <div class="modal fade" id="termsModal" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header bg-danger text-white">
+          <h5 class="modal-title"><i class="fas fa-file-contract me-2"></i> Terms and Conditions</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <p>This is a demonstration form for the CET138 ePortfolio assignment.</p>
+          <p>By submitting this form, you agree that:</p>
+          <ul>
+            <li>This is a simulated form submission for educational purposes</li>
+            <li>Your data will not be stored or shared with third parties</li>
+            <li>You are participating in a demonstration of HTML5 form features and AJAX submission</li>
+          </ul>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal">I Understand</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scroll to Top Button -->
+  <button id="toTop" title="Back to top" aria-label="Scroll to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
