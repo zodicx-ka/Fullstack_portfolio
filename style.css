@@ -1546,7 +1546,7 @@ html[data-theme="dark"] .form-select option {
 
 /* ========== TOAST NOTIFICATION ========== */
 .toast-container {
-  z-index: 1060;
+  z-index: 1080;
 }
 
 .toast {
@@ -1557,6 +1557,20 @@ html[data-theme="dark"] .form-select option {
 
 .toast-header {
   border: none;
+}
+
+.toast-body {
+  background: var(--card-bg);
+  color: var(--text-body);
+}
+
+html[data-theme="dark"] .toast-body {
+  background: var(--card-bg);
+  color: var(--text-body);
+}
+
+html[data-theme="dark"] .toast {
+  box-shadow: 0 8px 24px rgba(0,0,0,0.5);
 }
 
 .bg-purple {
