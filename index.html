@@ -407,9 +407,9 @@
             <div class="profile-card-header">
               <div class="profile-card-cover"></div>
               <div class="profile-card-social">
-                <a href="https://github.com/zodicx-ka" class="social-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                <a href="https://linkedin.com/in/yash-sharma-329616229" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                <a href="https://x.com/" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
               </div>
               <div class="profile-avatar-wrap">
                 <div class="profile-avatar"><i class="fas fa-user-graduate"></i></div>
@@ -544,7 +544,7 @@
                     <a href="#">Home</a>
                     <a href="#">About</a>
                     <a href="#">Services</a>
-                    <a href="mailto:ys6864644@gmail.com">Contact</a>
+                    <a href="#">Contact</a>
                   </div>
                   <div class="flex-actions">
                     <button>Login</button>
@@ -675,7 +675,7 @@
                 <div class="col-md-4">
                   <div class="product-card">
                     <div class="product-badge">New</div>
-                    <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=300&h=300&fit=crop&auto=format" class="product-img" alt="Product 1">
+                    <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=300&h=300&fit=crop&auto=format" class="product-img" alt="Wireless Headphones">
                     <h5>Wireless Headphones</h5>
                     <p class="product-price">$79.99</p>
                     <div class="product-rating">
@@ -694,7 +694,7 @@
                 
                 <div class="col-md-4">
                   <div class="product-card">
-                    <img src="https://images.unsplash.com/photo-1546868871-7041f2a55e12?w=300&h=300&fit=crop&auto=format" class="product-img" alt="Product 2">
+                    <img src="https://images.unsplash.com/photo-1546868871-7041f2a55e12?w=300&h=300&fit=crop&auto=format" class="product-img" alt="Smart Watch">
                     <h5>Smart Watch</h5>
                     <p class="product-price">$199.99</p>
                     <div class="product-rating">
@@ -714,7 +714,7 @@
                 <div class="col-md-4">
                   <div class="product-card">
                     <div class="product-badge sale">-15%</div>
-                    <img src="https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=300&h=300&fit=crop&auto=format" class="product-img" alt="Product 3">
+                    <img src="https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=300&h=300&fit=crop&auto=format" class="product-img" alt="Bluetooth Speaker">
                     <h5>Bluetooth Speaker</h5>
                     <p class="product-price"><del>$89.99</del> $76.49</p>
                     <div class="product-rating">
@@ -756,22 +756,7 @@
               <h3><i class="fas fa-cubes me-2"></i> Bootstrap Components</h3>
             </div>
             <div class="card-body">
-              <!-- Toast Container -->
-              <div class="toast-container position-fixed bottom-0 end-0 p-3" style="z-index: 11">
-                <div id="cartToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
-                  <div class="toast-header bg-purple text-white">
-                    <i class="fas fa-check-circle me-2"></i>
-                    <strong class="me-auto">Cart Updated</strong>
-                    <small>just now</small>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="toast"></button>
-                  </div>
-                  <div class="toast-body" id="toastMessage">
-                    Item added to cart!
-                  </div>
-                </div>
-              </div>
               
-              <!-- Accordion -->
               <div class="accordion mb-4" id="bootstrapAccordion">
                 <div class="accordion-item">
                   <h2 class="accordion-header">
@@ -1133,6 +1118,21 @@
         <div class="modal-footer">
           <button type="button" class="btn btn-primary" data-bs-dismiss="modal">I Understand</button>
         </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification — fixed to viewport corner, must be at body level -->
+  <div class="toast-container position-fixed bottom-0 end-0 p-3" style="z-index:1080">
+    <div id="cartToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="toast-header bg-purple text-white">
+        <i class="fas fa-check-circle me-2"></i>
+        <strong class="me-auto">Cart Updated</strong>
+        <small>just now</small>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="toast"></button>
+      </div>
+      <div class="toast-body" id="toastMessage">
+        Item added to cart!
       </div>
     </div>
   </div>
